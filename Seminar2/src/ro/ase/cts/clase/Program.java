@@ -1,17 +1,22 @@
 package ro.ase.cts.clase;
 
 import ro.ase.cts.readere.AngajatReader;
+import ro.ase.cts.readere.AplicantReader;
 
 import java.io.FileNotFoundException;
 import java.util.List;
 
 public class Program {
 
+	public static List<Aplicant> citesteAplicanti(AplicantReader aplicantReader)throws NumberFormatException,FileNotFoundException{
+		return aplicantReader.citesteAplicanti();
+	}
 	public static void main(String[] args) {
-		List<Angajat> listaAngajati;
+		List<Aplicant> listaAplicanti;
+
 		try {
-			listaAngajati = AngajatReader.readAngajati("angajati.txt");
-			for(Angajat angajat:listaAngajati)
+			listaAplicanti = citesteAplicanti(new AngajatReader("angajati.txt"));
+			for(Aplicant angajat:listaAplicanti)
 				System.out.println(angajat.toString());
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
