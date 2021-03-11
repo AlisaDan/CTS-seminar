@@ -1,2 +1,5 @@
-/Seminar2/.idea/
+/.idea
+*.iml
 
+*/target/*
+.out
