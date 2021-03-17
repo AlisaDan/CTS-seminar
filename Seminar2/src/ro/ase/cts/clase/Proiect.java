@@ -1,7 +1,8 @@
 package ro.ase.cts.clase;
 
 public class Proiect {
-private int pragAdmitere;
+
+    private int pragAdmitere;
 
     public Proiect(int pragAdmitere) {
         this.pragAdmitere = pragAdmitere;

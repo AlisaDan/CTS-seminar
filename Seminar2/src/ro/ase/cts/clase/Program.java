@@ -14,9 +14,9 @@ public class Program {
     }
 
     public static void main(String[] args) {
-        System.out.println("Suma finantare pt student: " + Student.getSumaFinantare());
-        System.out.println("Suma finantare pt elev: " + Elev.getSumaFinantare());
-        System.out.println("Suma finantare pt angajat: " + Angajat.getSumaFinantare());
+        System.out.println("Suma finantare pentru student: " + Student.getSumaFinantare());
+        System.out.println("Suma finantare pentru elev: " + Elev.getSumaFinantare());
+        System.out.println("Suma finantare pentru angajat: " + Angajat.getSumaFinantare());
         List<Aplicant> listaAplicanti;
         AplicantReader aplicantReader = new ElevReader("elevi.txt");
         try {

@@ -10,13 +10,16 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ElevReader extends AplicantReader{
+
+    public static final String DELIMITER = ",|\n";
+
     public ElevReader(String fileName) {
         super(fileName);
     }
 
     public List<Aplicant> citesteAplicanti() throws FileNotFoundException {
         Scanner input2 = new Scanner(new File(super.getFileName()));
-        input2.useDelimiter(",|\n");
+        input2.useDelimiter(DELIMITER);
         List<Aplicant> elevi = new ArrayList<Aplicant>();
 
         while (input2.hasNext()) {

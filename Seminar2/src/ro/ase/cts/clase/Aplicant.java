@@ -3,13 +3,13 @@ package ro.ase.cts.clase;
 import java.util.Arrays;
 
 public abstract class Aplicant {
+
     protected String nume;
     protected String prenume;
     protected int varsta;
     protected int punctaj;
     protected int numarProiecte;
     protected String[] denumiriProiecte;
-
 
 
     public String getNume() {
@@ -28,18 +28,14 @@ public abstract class Aplicant {
         this.prenume = prenume;
     }
 
-    public int getVarsta() {
-        return varsta;
-    }
-
     public void setVarsta(int varsta) {
         this.varsta = varsta;
     }
 
-	public abstract float getSumaFinantaree();
+    public abstract float getSumaFinantaree();
 
-	public void afiseazaStatus(Proiect proiect) {
-		System.out.print("Aplicantul "+nume+" "+ prenume);
+    public void afiseazaStatus(Proiect proiect) {
+        System.out.print("Aplicantul " + nume + " " + prenume);
         if (punctaj > proiect.getPragAdmitere())
             System.out.println(" a fost acceptat.");
         else
