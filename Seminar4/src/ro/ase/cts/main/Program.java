@@ -13,5 +13,9 @@ public class Program {
         ClinicaVeterinaraLazy clinicaVeterinaraLazy1=ClinicaVeterinaraLazy.getInstance("clinica2","str Libertatii",2,20432.54f);
         System.out.println(clinicaVeterinaraLazy);
         System.out.println(clinicaVeterinaraLazy1);
+        clinicaVeterinaraLazy.setNumarMedici(10);
+        clinicaVeterinaraLazy.setNume("numeclinica");
+        clinicaVeterinaraLazy.getNumarMedici();
+        clinicaVeterinaraLazy.getNume();
     }
 }

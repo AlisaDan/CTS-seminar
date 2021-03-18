@@ -2,9 +2,9 @@ package ro.ase.cts.lazy;
 
 
 public class ClinicaVeterinaraLazy {
-    private final String nume;
+    private  String nume;
     private final String adresa;
-    private final int numarMedici;
+    private  int numarMedici;
     private final float buget;
     private static ClinicaVeterinaraLazy instanta=null;
 
@@ -14,7 +14,7 @@ public class ClinicaVeterinaraLazy {
         this.numarMedici = numarMedici;
         this.buget = buget;
     }
-    public static ClinicaVeterinaraLazy getInstance(String nume, String adresa, int numarMedici, float buget){
+    public static synchronized ClinicaVeterinaraLazy getInstance(String nume, String adresa, int numarMedici, float buget){
         if(instanta==null){
             instanta=new ClinicaVeterinaraLazy(nume, adresa,numarMedici,buget);
         }
@@ -29,5 +29,22 @@ public class ClinicaVeterinaraLazy {
                 ", numarMedici=" + numarMedici +
                 ", buget=" + buget +
                 '}';
+
+    }
+
+    public String getNume() {
+        return nume;
+    }
+
+    public int getNumarMedici() {
+        return numarMedici;
+    }
+
+    public void setNume(String nume) {
+        this.nume = nume;
+    }
+
+    public void setNumarMedici(int numarMedici) {
+        this.numarMedici = numarMedici;
     }
 }
