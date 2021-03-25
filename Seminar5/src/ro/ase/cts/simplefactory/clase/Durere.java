@@ -1,4 +1,4 @@
-package ro.ase.cts.clase;
+package ro.ase.cts.simplefactory.clase;
 
 public class Durere extends Categorie{
     public Durere(float pretDeBaza) {

@@ -1,6 +1,6 @@
 package ro.ase.cts.program;
 
-import ro.ase.cts.clase.*;
+import ro.ase.cts.simplefactory.clase.*;
 
 public class Main {
     public static CategoriiMedicamente getTipCategorie(){
