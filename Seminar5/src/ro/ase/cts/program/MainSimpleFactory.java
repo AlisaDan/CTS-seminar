@@ -2,7 +2,7 @@ package ro.ase.cts.program;
 
 import ro.ase.cts.simplefactory.clase.*;
 
-public class Main {
+public class MainSimpleFactory {
     public static CategoriiMedicamente getTipCategorie(){
         return CategoriiMedicamente.raceala;
     }
