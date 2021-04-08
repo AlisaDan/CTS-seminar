@@ -1,6 +1,5 @@
 package ro.ase.cts.adapterclase.main;
 
-import ro.ase.cts.adapterclase.Leasing;
 import ro.ase.cts.adapterclase.AdapterCredit;
 import ro.ase.cts.adapterclase.InterfataCredit;
 
