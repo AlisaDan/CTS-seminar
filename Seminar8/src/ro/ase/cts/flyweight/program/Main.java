@@ -11,6 +11,6 @@ public class Main {
         FabricaRezervari fabricaRezervari= new FabricaRezervari();
         fabricaRezervari.getClient("alisa@emai.com").afisareInformatii(rezervare1);
         fabricaRezervari.getClient("alisa@emai.com").afisareInformatii(rezervare2);
-        
+
     }
 }
