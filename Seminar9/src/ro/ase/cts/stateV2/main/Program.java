@@ -10,7 +10,7 @@ public class Program {
 
         masa.rezervaMasa();
         masa.rezervaMasa();
-        
+
         masa.ocupaMasa();
 
         masa.elibereazaMasa();
