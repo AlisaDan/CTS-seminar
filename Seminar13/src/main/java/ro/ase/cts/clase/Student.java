@@ -3,9 +3,9 @@ package ro.ase.cts.clase;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Student {
+public class Student implements  IStudent {
     private String nume;
-    private final List<Integer> note;
+    private List<Integer> note;
 
     public Student(String nume) {
         this.nume = nume;
@@ -29,24 +29,24 @@ public class Student {
         return note;
     }
 
-    public void adaugaNota(int nota) {
+    public void adaugaNota(int nota){
         note.add(nota);
     }
 
-    public int getNota(int index) {
-        if (index >= 0 && index < note.size()) {
+    public int getNota(int index){
+        if(index>=0 && index< note.size()){
             return note.get(index);
         }
         throw new IndexOutOfBoundsException();
     }
 
-    public float calculeazaMedie() {
-        float suma = 0;
-        for (int nota : note) {
-            suma += nota;
+    public float calculeazaMedie(){
+        float suma=0;
+        for(int nota:note){
+            suma+=nota;
         }
-        if (note.size() > 0) {
-            return suma / note.size();
+        if(note.size()>0){
+            return suma/note.size();
         }
         return suma;
     }
@@ -59,6 +59,4 @@ public class Student {
         }
         return false;
     }
-
-
 }
