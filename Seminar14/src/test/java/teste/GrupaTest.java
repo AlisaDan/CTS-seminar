@@ -1,11 +1,17 @@
+package teste;
+
+import categorii.NormalTest;
+import categorii.TestGetPromovabilitate;
+import categorii.UrgentTest;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 import ro.ase.cts.clase.Grupa;
 import ro.ase.cts.clase.Student;
 
 public class GrupaTest {
 
-
+@Category(UrgentTest.class)
     @Test
     public void constructorTest() {
         Grupa grupa = new Grupa(1055);
@@ -17,7 +23,7 @@ public class GrupaTest {
         Grupa grupa = new Grupa(1000);
         Assert.assertEquals(1000, grupa.getNrGrupa());
     }
-
+    @Category(UrgentTest.class)
     @Test
     public void testareLimitaSuperioara() {
         Grupa grupa = new Grupa(1100);
@@ -33,7 +39,7 @@ public class GrupaTest {
     public void performantaTest() {
         Grupa grupa = new Grupa(1050);
     }
-
+    @Category({NormalTest.class,TestGetPromovabilitate.class})
     @Test
     public void corectitudinePromovabilitateTest() {
         Grupa grupa = new Grupa(1005);
@@ -44,7 +50,7 @@ public class GrupaTest {
         }
         Assert.assertEquals(0.6f, grupa.getPromovabilitate(), .001f);
     }
-
+    @Category(NormalTest.class)
     @Test
     public void limitaInferioaraPromovabilitateTest() {
         Grupa grupa = new Grupa(1005);
@@ -55,7 +61,7 @@ public class GrupaTest {
         }
         Assert.assertEquals(0.0f, grupa.getPromovabilitate(), .001f);
     }
-
+    @Category(UrgentTest.class)
     @Test
     public void limitaSuperioaraPromovabilitateTest() {
         Grupa grupa = new Grupa(1005);
@@ -66,19 +72,19 @@ public class GrupaTest {
         }
         Assert.assertEquals(1f, grupa.getPromovabilitate(), .001f);
     }
-
+    @Category({NormalTest.class, TestGetPromovabilitate.class})
     @Test
     public void boundaryPromovabilitateTest() {
         Grupa grupa = new Grupa(1010);
         Assert.assertEquals(0.0f, grupa.getPromovabilitate(), .001f);
     }
-
+    @Category({NormalTest.class, TestGetPromovabilitate.class})
     @Test
     public void cardinalityTest() {
         Grupa grupa = new Grupa(1005);
-            Student student = new Student();
-            student.adaugaNota(10);
-            grupa.adaugaStudent(student);
+        Student student = new Student();
+        student.adaugaNota(10);
+        grupa.adaugaStudent(student);
         Assert.assertEquals(1f, grupa.getPromovabilitate(), .001f);
     }
 
